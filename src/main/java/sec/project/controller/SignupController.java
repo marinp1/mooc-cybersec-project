@@ -32,15 +32,16 @@ public class SignupController {
     public String submitForm(@RequestParam String name, @RequestParam String password, @RequestParam String address) {
         Account newAccount = new Account(name, password, address);
         accountRepository.save(newAccount);
-        return "redirect:/profile?username=" + name;
+        return "redirect:/profile?username=" + name + "&password=" + password;
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String submitForm(@RequestParam String name, @RequestParam String password) {
-        Account tryAccount = accountRepository.findByUsername(name);
 
-        if (tryAccount != null && tryAccount.getPassword().equals(password)) {
-            return "redirect:/profile?username=" + name;
+        Account tryAccount = accountRepository.findByUsernameAndPassword(name, password);
+
+        if (tryAccount != null) {
+            return "redirect:/profile?username=" + name + "&password=" + password;
         } else {
             return "form";
         }
@@ -55,7 +56,7 @@ public class SignupController {
     @RequestMapping(value = "/profile", method = RequestMethod.GET)
     public String getProfile(HttpServletRequest request, Model model) {
 
-        Account account = accountRepository.findByUsername(request.getParameter("username"));
+        Account account = accountRepository.findByUsernameAndPassword(request.getParameter("username"), request.getParameter("password"));
 
         if (account == null) {
             return "form";
