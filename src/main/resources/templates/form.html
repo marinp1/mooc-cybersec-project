@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>Sign up form</title>
+        <title>Sign in</title>
     </head>
     <body>
 
-        <h1>Sign up to the event using this form</h1>
+        <h1>Create account</h1>
 
-        <form action="#" th:action="@{/form}" method="POST">
-            <p><label for="name">Name</label>: <input type="text" name="name" id="name"/></p>
-            <p><label for="address">Address</label>: <input type="text" name="address" id="address"/></p>
-            <p><input type="submit" value="Submit" /></p>
+        <form action="#" th:action="@{/signup}" method="POST">
+            <p><label for="signUpName">Name</label>: <input type="text" name="name" id="signUpName"/></p>
+            <p><label for="signUpPassword">Password</label>: <input type="password" name="password" id="signUpPassword"/></p>
+            <p><label for="signUpAddress">Address</label>: <input type="text" name="address" id="signUpAddress"/></p>
+            <p><input type="submit" value="Create account" /></p>
+        </form>
+
+        <h1>Login</h1>
+
+        <form action="#" th:action="@{/login}" method="POST">
+            <p><label for="loginName">Name</label>: <input type="text" name="name" id="loginName"/></p>
+            <p><label for="loginPassword">Password</label>: <input type="password" name="password" id="loginPassword"/></p>
+            <p><input type="submit" value="Login" /></p>
         </form>
 
         <p></p>

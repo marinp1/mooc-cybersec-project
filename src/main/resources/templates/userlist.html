@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Userlist</title>
+</head>
+    <body>
+
+        <h1>List of accounts</h1>
+
+        <ul>
+            <li th:each="account : ${accounts}">
+                <span th:text="${account.username}"></span>
+            </li>
+        </ul>
+
+    </body>
+</html>
