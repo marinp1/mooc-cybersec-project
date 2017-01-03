@@ -45,7 +45,7 @@ There is a list of users on the site which is accessible without any credentials
 
 ## #5 Cross-Site Scripting (XSS)
 None of the data that application receives is escaped in any way. If the service would
-be integrated into another services, this could cause massive problems. In this application, it makes in impossible to log
+be integrated into another services, this could cause massive problems. In this application, it makes it impossible to log
 in as some accounts with special characters or log in as wrong user in some.
 
 1. Create an account with name 'account' and some password
