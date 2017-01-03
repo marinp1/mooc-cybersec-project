@@ -2,7 +2,7 @@
 Cyber Security Base Project 1, duplicated from the template.
 
 # Issues
-Five of ten issues replcated from https://www.owasp.org/index.php/Top_10_2013-Top_10.
+Five of ten issues replicated from https://www.owasp.org/index.php/Top_10_2013-Top_10.
 
 ## #1 Sensitive Data Exposure
 Usernames, addresses and passwords are all kept in plaintext. A breach would endanger
@@ -35,7 +35,7 @@ could not execute statement; SQL [n/a]; constraint ["UK_GEX1LMAQPG0IR5G1F5EFTYAA
 
 **Fix: Create error pages for possible exceptions.**
 
-## #3 Missing Function Level Access Control
+## #4 Missing Function Level Access Control
 There is a list of users on the site which is accessible without any credentials.
 
 1. Navigate to http://localhost:8080/userlist
