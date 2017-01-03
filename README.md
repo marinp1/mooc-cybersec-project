@@ -54,4 +54,4 @@ in as some accounts with special characters or log in as wrong user in some.
 
 If the accounts are created with the same password, logging in with 'account&more' will actually log in as 'account', releaving personal information.
 
-**Fix: escape input data.**
+**Fix: Escape input data.**
