@@ -18,7 +18,7 @@ all information about users easily.
 Username and password are sent as parameters in a GET-request, allowing an easy way to brute force.
 
 1. Create a user or login successfully
-2. Look at address bar parameters (user=[username]&password=[password])
+2. Look at address bar parameters (username=[username]&password=[password])
 3. Using information from issue #4, start bruteforcing passwords for known users.
 
 **Fix: More sophisticated authentication e.g. (org.springframework.security.core.Authentication) would make this approach impossible.**
